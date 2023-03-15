@@ -29,16 +29,15 @@ public class ReflectionTest {
     @Test
     void reflection1() throws Exception {
         //클래스 정보
-        Class classHello = Class.forName("hello.proxy.jdkdynamic.ReflectionTest$Hello");
+        Class chello = Class.forName("hello.proxy.jdkdynamic.ReflectionTest$Hello");
 
         Hello target = new Hello();
         //callA 메서드 정보
-        Method methodCallA = classHello.getMethod("callA");
+        Method methodCallA = chello.getMethod("callA");
         Object result1 = methodCallA.invoke(target);
         log.info("result1={}", result1);
-
         //callB 메서드 정보
-        Method methodCallB = classHello.getMethod("callB");
+        Method methodCallB = chello.getMethod("callB");
         Object result2 = methodCallB.invoke(target);
         log.info("result2={}", result2);
     }
@@ -57,7 +56,7 @@ public class ReflectionTest {
     }
 
     private void dynamicCall(Method method, Object target) throws Exception {
-        log.info("start");
+        log.info("dynamicCall start");
         Object result = method.invoke(target);
         log.info("result={}", result);
     }
