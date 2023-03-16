@@ -11,6 +11,8 @@ public class JdkDynamicProxyTest {
 
     @Test
     void dynamicA() {
+        log.info("jdkDynamicProxy test1 start");
+
         AInterface target = new AImpl();
         TimeInvocationHandler handler = new TimeInvocationHandler(target);
 
@@ -23,6 +25,8 @@ public class JdkDynamicProxyTest {
 
     @Test
     void dynamicB() {
+        log.info("jdkDynamicProxy test2 start");
+
         BInterface target = new BImpl();
         TimeInvocationHandler handler = new TimeInvocationHandler(target);
 
