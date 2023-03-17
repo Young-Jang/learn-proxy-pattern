@@ -12,7 +12,6 @@ public class JdkDynamicProxyTest {
     @Test
     void dynamicA() {
         log.info("jdkDynamicProxy test1 start");
-
         AInterface target = new AImpl();
         TimeInvocationHandler handler = new TimeInvocationHandler(target);
 
