@@ -14,11 +14,9 @@ public class BasicTest {
     @Test
     void basicConfig() {
         ApplicationContext applicationContext = new AnnotationConfigApplicationContext(BasicConfig.class);
-
         //A는 빈으로 등록된다.
         A a = applicationContext.getBean("beanA", A.class);
         a.helloA();
-
         //B는 빈으로 등록되지 않는다.
         Assertions.assertThrows(NoSuchBeanDefinitionException.class, () -> applicationContext.getBean(B.class));
     }
