@@ -21,6 +21,7 @@ public class AutoProxyConfig {
         //pointcut
         NameMatchMethodPointcut pointcut = new NameMatchMethodPointcut();
         pointcut.setMappedNames("request*", "order*", "save*");
+
         //advice
         LogTraceAdvice advice = new LogTraceAdvice(logTrace);
         return new DefaultPointcutAdvisor(pointcut, advice);
@@ -31,6 +32,7 @@ public class AutoProxyConfig {
         //pointcut
         AspectJExpressionPointcut pointcut = new AspectJExpressionPointcut();
         pointcut.setExpression("execution(* hello.proxy.app..*(..))");
+
         //advice
         LogTraceAdvice advice = new LogTraceAdvice(logTrace);
         return new DefaultPointcutAdvisor(pointcut, advice);
@@ -41,6 +43,7 @@ public class AutoProxyConfig {
         //pointcut
         AspectJExpressionPointcut pointcut = new AspectJExpressionPointcut();
         pointcut.setExpression("execution(* hello.proxy.app..*(..)) && !execution(* hello.proxy.app..noLog(..))");
+
         //advice
         LogTraceAdvice advice = new LogTraceAdvice(logTrace);
         return new DefaultPointcutAdvisor(pointcut, advice);
