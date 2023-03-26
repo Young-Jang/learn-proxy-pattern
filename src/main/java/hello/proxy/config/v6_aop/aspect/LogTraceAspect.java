@@ -14,7 +14,6 @@ import java.lang.reflect.Method;
 public class LogTraceAspect {
 
     private final LogTrace logTrace;
-
     public LogTraceAspect(LogTrace logTrace) {
         this.logTrace = logTrace;
     }
