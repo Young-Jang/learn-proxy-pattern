@@ -13,7 +13,7 @@ public class NotNullAspect {
 
     @Before("@annotation(hello.proxy.aop.exam.annotation.NotNull) && execution(* hello.proxy.aop.exam.dto.ExamDto.*.Builder.build())")
     public void isNotNull(JoinPoint joinPoint) throws Throwable {
-        log.info("testtest");
+        log.info("notNull");
         Object[] args = joinPoint.getArgs();
         for (Object arg : args) {
             if (arg == null) {
