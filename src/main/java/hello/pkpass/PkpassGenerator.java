@@ -29,13 +29,13 @@ public class PkpassGenerator {
         PassInformation passInfo = new PassInformation()
                 .setFormatVersion(1)
                 .setPassTypeIdentifier("pass.com.example.mypass")
-                .setSerialNumber("123456")
-                .setTeamIdentifier("ABCDEFGH")
+                .setSerialNumber("100")
+                .setTeamIdentifier("testteam")
                 .setOrganizationName("My Organization")
                 .setDescription("Pass description")
-                .setLogoText("Pass logo")
-                .setForegroundColor("rgb(255, 255, 255)")
-                .setBackgroundColor("rgb(60, 65, 76)");
+                .setLogoText("test logo")
+                .setForegroundColor("rgb(0, 5, 25)")
+                .setBackgroundColor("rgb(255, 65, 76)");
 
         // PKPass에 추가할 사용자 정보를 설정합니다.
         UserInfo userInfo = new UserInfo()
