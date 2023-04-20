@@ -47,7 +47,7 @@ public class PkpassGenerator {
 
         // PKPass에 추가할 파일 정보를 설정합니다.
         List<Passbook> passbooks = new ArrayList<>();
-        Passbook passbook = new Passbook("icon.png", getClass().getResourceAsStream("/icon.png"), "image/png");
+        Passbook passbook = new Passbook("icon.png", getClass().getResourceAsStream("/advanced/proxy/icon.png"), "/advanced/proxyimage/png");
         passbooks.add(passbook);
 
         // PKPass 파일을 생성합니다.
@@ -55,7 +55,7 @@ public class PkpassGenerator {
         pass.write(stream, passbooks);
 
         // HttpServletResponse를 이용하여 파일을 반환합니다.
-        response.setContentType("application/vnd.apple.pkpass");
+        response.setContentType("/advanced/proxy/vnd.apple.pkpass");
         response.setHeader("Content-Disposition", "attachment; filename=mypass.pkpass");
         response.setContentLength(stream.size());
         response.getOutputStream().write(stream.toByteArray());
