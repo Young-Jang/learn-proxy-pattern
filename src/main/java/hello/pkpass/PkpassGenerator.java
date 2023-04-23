@@ -29,9 +29,9 @@ public class PkpassGenerator {
         PassInformation passInfo = new PassInformation()
                 .setFormatVersion(1)
                 .setPassTypeIdentifier("pass.com.example.mypass")
-                .setSerialNumber("100")
+                .setSerialNumber("1")
                 .setTeamIdentifier("testteam")
-                .setOrganizationName("My Organization")
+                .setOrganizationName("test pass")
                 .setDescription("Pass description")
                 .setLogoText("test logo")
                 .setForegroundColor("rgb(0, 5, 25)")
@@ -39,8 +39,8 @@ public class PkpassGenerator {
 
         // PKPass에 추가할 사용자 정보를 설정합니다.
         UserInfo userInfo = new UserInfo()
-                .setFullName("John Doe")
-                .setEmailAddress("john.doe@example.com");
+                .setFullName("Young jang")
+                .setEmailAddress("b116104@gmail.com");
 
         // PKPass 객체를 생성합니다.
         Pass pass = new Pass(passInfo, userInfo);
