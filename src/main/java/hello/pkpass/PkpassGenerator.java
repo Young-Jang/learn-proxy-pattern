@@ -61,4 +61,25 @@ public class PkpassGenerator {
         response.getOutputStream().write(stream.toByteArray());
     }
 
+    public class PkpassGenerator {
+
+        public static void main(String[] args) throws Exception {
+
+            Pkpass pkpass = new Pkpass();
+
+            // 패스의 유형을 설정합니다.
+            pkpass.setPassTypeIdentifier("pass.com.example.myapp");
+            pkpass.setTeamIdentifier("ABC123XYZ");
+            pkpass.setSerialNumber("1234567890");
+            pkpass.setAuthenticationToken("abcdefghijklmnopqrstuvwxyz012345");
+
+            // 패스에 필요한 정보를 추가합니다.
+            pkpass.addHeaderField("key1", "value1");
+            pkpass.addHeaderField("key2", "value2");
+
+            // 파일을 생성합니다.
+            pkpass.create("path/to/output.pkpass");
+        }
+    }
+
 }
